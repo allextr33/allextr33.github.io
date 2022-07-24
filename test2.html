@@ -17,8 +17,56 @@
    </style>
  </head>
  <body>
+ <form>
  
-  <form>
+    <p><select id="dropdown0" class="font">
+	<optgroup label="Бригадир">
+    <option value="Бригадир - Артем">Артем</option>
+	<option value="Бригадир - Станислав">Стас</option>
+	<option value="Бригадир - Анатолий">Толик</option>
+	<option value="Бригадир - Сергей">Сергей</option>
+	<option value="Бригадир - ?">Еще</option>
+	</optgroup>
+	</select></p>
+	
+	<p><select id="dropdown00" class="font">
+	<optgroup label="Помощник">
+    <option value="Помощник - Александр">Александр</option>
+	<option value="Помощник -">...</option>
+	<option value="Без помошника">Без помошника</option>
+	</optgroup>
+	</select></p>
+	
+    <input type="date" id="date" class="font">
+  
+    <input type="button" onclick="paste0()" value="Шапка" class="font"></input>
+  
+    <script type="text/javascript">
+    
+	var brig = document.getElementById('dropdown0');
+    var pom = document.getElementById('dropdown00');
+	var mydate = document.getElementById('date');
+
+    function paste0(){
+          mytextbox.value = mytextbox.value + '\r\n' + brig.value + '\r\n' + pom.value + '\r\n' + "Дата - " + mydate.value + '\r\n' + "Обьект - " + '\r\n';
+		  
+		  
+    }
+    </script>
+	
+	<input  id="OD" value=" " class="font"></input>
+	<input type="button" onclick="ODO()" value="Одометр" class="font"></input>
+	
+	<script type="text/javascript">
+	
+	    
+	var myODO = document.getElementById('OD');
+    
+    function ODO(){
+          mytextbox.value = mytextbox.value + "Показания одометра - " + myODO.value + '\r\n';
+		  
+    }
+    </script>
 	  
    <p><select id="dropdown" class="font">
     <optgroup label="Основной монтаж:">
