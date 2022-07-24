@@ -14,33 +14,31 @@
 	.font {
 	font-size: 14px;
 	}
+	select {width:400px}
    </style>
  </head>
  <body>
  <form>
- 
+	<hr>
+	<p>Бригадир</p>
     <p><select id="dropdown0" class="font">
-	<optgroup label="Бригадир">
-    <option value="Бригадир - Артем">Артем</option>
+	<option value="Бригадир - Артем">Артем</option>
 	<option value="Бригадир - Станислав">Стас</option>
 	<option value="Бригадир - Анатолий">Толик</option>
 	<option value="Бригадир - Сергей">Сергей</option>
 	<option value="Бригадир - ?">Еще</option>
-	</optgroup>
 	</select></p>
-	
+	<p>Помощник</p>
 	<p><select id="dropdown00" class="font">
-	<optgroup label="Помощник">
-    <option value="Помощник - Александр">Александр</option>
+	<option value="Помощник - Александр">Александр</option>
 	<option value="Помощник -">...</option>
-	<option value="Без помошника">Без помошника</option>
-	</optgroup>
+	<option value="Помощник - нет">Без помошника</option>
 	</select></p>
 	
-    <input type="date" id="date" class="font">
+    <p>Дата <input type="date" id="date" class="font">
   
-    <input type="button" onclick="paste0()" value="Шапка" class="font"></input>
-  
+    <input type="button" onclick="paste0()" value="Добавить шапку" class="font"></input>
+	<hr>
     <script type="text/javascript">
     
 	var brig = document.getElementById('dropdown0');
@@ -54,9 +52,9 @@
     }
     </script>
 	
-	<input  id="OD" value=" " class="font"></input>
-	<input type="button" onclick="ODO()" value="Одометр" class="font"></input>
-	
+	<p><input  id="OD" value=" " class="font"></input>
+	<input type="button" onclick="ODO()" value="Одометр" class="font"></input></p>
+	<hr>
 	<script type="text/javascript">
 	
 	    
@@ -179,12 +177,12 @@
    </p>
    <p>
    <select id="dropdown2" class="font">
-    <option value=" "> Высота</option>
-    <option value=" Выше 3,5м.- ">Выше 3,5м.-</option>
+    <option value=" "> Высота установки</option>
     <option value=" Ниже 3,5м.- ">Ниже 3,5м.-</option>
+	<option value=" Выше 3,5м.- ">Выше 3,5м.-</option>
    </select>
    
-   <input  id="opt" value=" " class="font"></input>
+   <p>Кол-во/Длина <input  id="opt" value=" " class="font"></input></p>
    
    </p>
    <input type="button" onclick="paste()" value="Вставить" class="font"></input>
@@ -195,7 +193,7 @@
    <script type="text/javascript">
     
 	var mytextbox = document.getElementById('mytext');
-    var mydropdown = document.getElementById('dropdown');
+        var mydropdown = document.getElementById('dropdown');
 	var mydropdown2 = document.getElementById('dropdown2');
 	var myopt = document.getElementById('opt');
 
