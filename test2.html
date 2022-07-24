@@ -129,16 +129,17 @@
 	<option value="Дополнительные работы, примечания, комментарии указать ниже:">Дополнительные работы, примечания, комментарии указать ниже:</option>
    </select>
    </p>
-   <p><select id="dropdown2" class="font">
+   <p>
+   <select id="dropdown2" class="font">
     <option value=" "> Высота</option>
     <option value=" Выше 3,5м.- ">Выше 3,5м.-</option>
     <option value=" Ниже 3,5м.- ">Ниже 3,5м.-</option>
-	   </select></p>
+   </select>
    
    <input  id="opt" value=" " class="font"></input>
    
-   
-   <p><input type="button" onclick="paste()" value="Вставить" class="font"></input></p>
+   </p>
+   <input type="button" onclick="paste()" value="Вставить" class="font"></input>
    <p><textarea id="mytext" class="box1" class="font"></textarea></p>
    
    
@@ -146,14 +147,14 @@
    <script type="text/javascript">
     
 	var mytextbox = document.getElementById('mytext');
-        var mydropdown = document.getElementById('dropdown');
+    var mydropdown = document.getElementById('dropdown');
 	var mydropdown2 = document.getElementById('dropdown2');
 	var myopt = document.getElementById('opt');
 
     function paste(){
           mytextbox.value = mytextbox.value + '\r\n' + mydropdown.value + mydropdown2.value + myopt.value;
-	  mydropdown2.value ="";
-	  opt.value = "";
+		  mydropdown2.value ="";
+		  opt.value = "";
     }
 </script>
    
