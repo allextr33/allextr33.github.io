@@ -6,7 +6,7 @@
   <style>
    .box1 { 
     //background: #f0f0f0; /* Цвет фона */
-    width: 95%; /* Ширина блока */
+    width: 400px; /* Ширина блока */
 	height: 500px;
     padding: 10px; /* Поля */
     //border: 2px solid #000; /* Параметры рамки */
@@ -36,17 +36,18 @@
 	</select></p>
 	
     <p>Дата <input type="date" id="date" class="font">
-  
-    <input type="button" onclick="paste0()" value="Добавить шапку" class="font"></input>
+    <p>Обьект <input id="OB" value=" " class="font"></input>
+    <p><input type="button" onclick="paste0()" value="Добавить шапку" class="font"></input>
 	<hr>
     <script type="text/javascript">
     
 	var brig = document.getElementById('dropdown0');
     var pom = document.getElementById('dropdown00');
+	var myob = document.getElementById('OB');
 	var mydate = document.getElementById('date');
 
     function paste0(){
-          mytextbox.value = mytextbox.value + '\r\n' + brig.value + '\r\n' + pom.value + '\r\n' + "Дата - " + mydate.value + '\r\n' + "Обьект - " + '\r\n';
+          mytextbox.value = mytextbox.value + '\r\n' + brig.value + '\r\n' + pom.value + '\r\n' + "Дата - " + mydate.value + '\r\n' + "Обьект - " + myob.value + '\r\n';
 		  
 		  
     }
@@ -65,7 +66,7 @@
 		  
     }
     </script>
-<p>Основной монтаж:</p>  
+	  
    <p><select id="dropdown" class="font">
     <optgroup label="Основной монтаж:">
     <option value="-Установка камеры">Установка камеры</option>
@@ -193,7 +194,7 @@
    <script type="text/javascript">
     
 	var mytextbox = document.getElementById('mytext');
-        var mydropdown = document.getElementById('dropdown');
+    var mydropdown = document.getElementById('dropdown');
 	var mydropdown2 = document.getElementById('dropdown2');
 	var myopt = document.getElementById('opt');
 
