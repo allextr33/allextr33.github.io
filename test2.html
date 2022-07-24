@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
   <title>Список</title>
   <style>
    .box1 { 
@@ -10,14 +10,17 @@
 	height: 500px;
     padding: 10px; /* Поля */
     //border: 2px solid #000; /* Параметры рамки */
-   }
+	}
+	.font {
+	font-size: 200%;
+	}
    </style>
  </head>
  <body>
  
   <form>
 	  
-   <p><select id="dropdown">
+   <p><select id="dropdown" class="font">
     <optgroup label="Основной монтаж:">
     <option value="-Установка камеры">Установка камеры</option>
     
@@ -126,17 +129,17 @@
 	<option value="Дополнительные работы, примечания, комментарии указать ниже:">Дополнительные работы, примечания, комментарии указать ниже:</option>
    </select>
    
-   <select id="dropdown2">
+   <select id="dropdown2" class="font">
     <option value=" "> Высота</option>
     <option value=" Выше 3,5м.- ">Выше 3,5м.-</option>
     <option value=" Ниже 3,5м.- ">Ниже 3,5м.-</option>
    </select>
    
-   <input  id="opt" value=" "></input>
+   <input  id="opt" value=" " class="font"></input>
    
    </p>
-   <input type="button" onclick="paste()" value="Вставить"></input>
-   <p><textarea id="mytext" class="box1" value="Бригадир - "></textarea></p>
+   <input type="button" onclick="paste()" value="Вставить" class="font"></input>
+   <p><textarea id="mytext" class="box1" class="font"></textarea></p>
    
    
    
